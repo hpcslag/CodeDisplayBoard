@@ -47,5 +47,8 @@ and teacher need to access
 localhost:8080/teacher
 ```
 
+## License
+Use MIT License
+
 ## Editor Information
 [Ace editor](https://ace.c9.io/)
