@@ -1,0 +1,6 @@
+---
+  global:
+    title: "Code Display Board"
+    language: javascript
+  port: 8080
+  ip: "192.168.1.10"

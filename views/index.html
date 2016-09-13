@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+<script type="text/javascript">
+	
+</script>
+<body>
+<div id="editor" style="pointer-events: none;"></div>
+    
+<script src="./assets/ace-builds-master/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/socket.io-1.4.5.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("./assets/ace-builds-master/src-min/theme-monokai.js");
+    editor.getSession().setMode("ace/mode/<%= lang %>");
+
+
+    var socket = io();
+
+    socket.on('from teacher sent',function(data){
+    	console.log(data);
+    	editor.setValue(data,1);
+    });
+
+</script>
+</body>
+</html>

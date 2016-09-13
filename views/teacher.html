@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+</head>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+<script type="text/javascript">
+	
+</script>
+<body>
+<div id="editor" onkeypress="sendKeyCode(event)">function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</div>
+
+<script src="./assets/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/ace-builds-master/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/socket.io-1.4.5.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("./assets/ace-builds-master/src-min/theme-monokai");
+    editor.getSession().setMode("ace/mode/<%= lang %>");
+
+
+    var socket = io();
+
+    function sendKeyCode(e){
+    	socket.emit('from teacher key',editor.getValue().toString());
+    }
+
+    function writtingBackupCode(){
+
+    }
+
+</script>
+</body>
+</html>

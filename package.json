@@ -1,0 +1,27 @@
+{
+  "name": "cdbtec",
+  "version": "1.0.0",
+  "description": "In sometime teachers need to show their code to student.",
+  "main": "app.js",
+  "dependencies": {
+    "co-views": "^2.1.0",
+    "co-body": "^4.2.0",
+    "js-yaml": "^3.6.1",
+    "koa": "^1.2.4",
+    "koa-router": "^5.4.0",
+    "koa-ejs": "^3.0.0",
+    "koa-serve": "^0.1.7",
+    "koa-static": "^2.0.0",
+    "koa-static-folder": "^0.1.6",
+    "koa.io": "^0.0.3",
+    "socket.io": "^1.4.8",
+    "swig": "^1.4.2",
+    "yaml": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
