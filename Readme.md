@@ -1,4 +1,4 @@
-#Code Display Board
+# Code Display Board
 In sometime teachers need to show their code to student.
 
 code display-board give you better experience in class.
